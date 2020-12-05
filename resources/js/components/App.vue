@@ -1,10 +1,12 @@
 <template>
-    <div class="flex">
+   <div class="flex flex-row"> 
         <Sidebar/>
-        <Header/>
-        <section>
-            <router-view></router-view>
-        </section>
+        <div class="flex flex-col bg-gray-100 w-full">
+            <Header/>
+             <div class="container mx-auto top-16 mt-24"> 
+                <router-view></router-view>
+            </div>
+        </div>
     </div>
 </template>
 

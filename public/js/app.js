@@ -1920,6 +1920,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1998,8 +2000,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Header'
 });
@@ -2028,6 +2028,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Home'
 });
@@ -2043,6 +2046,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -19788,13 +19793,25 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "flex" },
+    { staticClass: "flex flex-row" },
     [
       _c("Sidebar"),
       _vm._v(" "),
-      _c("Header"),
-      _vm._v(" "),
-      _c("section", [_c("router-view")], 1)
+      _c(
+        "div",
+        { staticClass: "flex flex-col bg-gray-100 w-full" },
+        [
+          _c("Header"),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "container mx-auto top-16 mt-24" },
+            [_c("router-view")],
+            1
+          )
+        ],
+        1
+      )
     ],
     1
   )
@@ -19891,48 +19908,47 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", {}, [
-    _c(
-      "nav",
-      {
-        staticClass:
-          "flex fixed w-full top-0 bg-gray-700 h-16 border-b border-gray-800 z-10"
-      },
-      [
+  return _c(
+    "nav",
+    {
+      staticClass:
+        "flex w-full top-0 bg-gray-100 h-14 border-b border-gray-200 fixed"
+    },
+    [
+      _c("button", { staticClass: " w-12 flex items-center justify-center" }, [
         _c(
-          "button",
-          { staticClass: "h-16 w-12 flex item-center justify-center pt-5" },
+          "svg",
+          {
+            attrs: {
+              xmlns: "http://www.w3.org/2000/svg",
+              width: "22",
+              height: "22",
+              viewBox: "0 0 24 24",
+              fill: "none",
+              stroke: "#777",
+              "stroke-width": "2",
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round"
+            }
+          },
           [
-            _c(
-              "svg",
-              {
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  width: "24",
-                  height: "24",
-                  viewBox: "0 0 24 24",
-                  fill: "none",
-                  stroke: "#fff",
-                  "stroke-width": "2",
-                  "stroke-linecap": "round",
-                  "stroke-linejoin": "round"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: { d: "M21 9.5H3M21 4.5H3M21 14.5H3M21 19.5H3" }
-                })
-              ]
-            )
+            _c("path", {
+              attrs: { d: "M21 9.5H3M21 4.5H3M21 14.5H3M21 19.5H3" }
+            })
           ]
-        ),
-        _vm._v(" "),
-        _c("h3", { staticClass: "text-white mt-5" }, [
-          _vm._v("Laravel Vuex Tailwind")
-        ])
-      ]
-    )
-  ])
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "h3",
+        {
+          staticClass:
+            "text-white flex items-center justify-center text-gray-500"
+        },
+        [_vm._v("Laravel Vuex Tailwind")]
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -19963,15 +19979,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-24" }, [
-      _c("span", { staticClass: "text-3xl mx-5" }, [_vm._v("Dashboard")]),
+    return _c("div", {}, [
+      _c("h1", { staticClass: "text-gray-700 text-3xl mb-10" }, [
+        _vm._v("Dashboard")
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "grid grid-cols-3 gap-2" }, [
-        _c("div", { staticClass: "h-20 bg-orange-500" }, [_vm._v("1")]),
-        _vm._v(" "),
-        _c("div", {}, [_vm._v("2")]),
-        _vm._v(" "),
-        _c("div", {}, [_vm._v("3")])
+      _c("div", { staticClass: "flex flex-wrap" }, [
+        _c("div", { staticClass: "w-full" }, [
+          _c(
+            "div",
+            { staticClass: "bg-gradient-to-r from-teal-400 to-blue-500" },
+            [
+              _c("div", { staticClass: "flex flex-row items-center" }, [
+                _c("div", {})
+              ])
+            ]
+          )
+        ])
       ])
     ])
   }
@@ -19997,198 +20021,192 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "aside",
-      { staticClass: " h-screen sticky top-0 w-64 left-0 bg-gray-200" },
-      [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("ul", {}, [
-          _c(
-            "li",
-            {
-              staticClass:
-                "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
-            },
-            [
-              _c("span", [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "w-4 h-4 ml-3",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      width: "24",
-                      height: "24",
-                      viewBox: "0 0 24 24",
-                      fill: "none",
-                      stroke: "currentColor",
-                      "stroke-width": "2",
-                      "stroke-linecap": "round",
-                      "stroke-linejoin": "round"
-                    }
-                  },
-                  [
-                    _c("path", { attrs: { d: "M3 3v18h18" } }),
-                    _c("path", {
-                      attrs: { d: "M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" }
-                    })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
+  return _c(
+    "aside",
+    { staticClass: "h-screen sticky top-0 w-64 left-0 bg-gray-200" },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("ul", { staticClass: "mt-10" }, [
+        _c(
+          "li",
+          {
+            staticClass:
+              "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
+          },
+          [
+            _c("span", [
               _c(
-                "span",
-                { staticClass: "text-base ml-3" },
+                "svg",
+                {
+                  staticClass: "w-4 h-4 ml-3",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    "stroke-width": "2",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
                 [
-                  _c("router-link", { attrs: { to: "/" } }, [
-                    _vm._v("Dashboard")
-                  ])
-                ],
-                1
+                  _c("path", { attrs: { d: "M3 3v18h18" } }),
+                  _c("path", {
+                    attrs: { d: "M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" }
+                  })
+                ]
               )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            {
-              staticClass:
-                "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
-            },
-            [
-              _c("span", [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "w-4 h-4 ml-3",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      width: "24",
-                      height: "24",
-                      viewBox: "0 0 24 24",
-                      fill: "none",
-                      stroke: "currentColor",
-                      "stroke-width": "2",
-                      "stroke-linecap": "round",
-                      "stroke-linejoin": "round"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: {
-                        d: "M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
-                      }
-                    })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "span",
-                { staticClass: "text-base ml-3" },
-                [
-                  _c("router-link", { attrs: { to: "/course" } }, [
-                    _vm._v("Courses")
-                  ])
-                ],
-                1
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            {
-              staticClass:
-                "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
-            },
-            [
-              _c("span", [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "w-4 h-4 ml-3",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      width: "24",
-                      height: "24",
-                      viewBox: "0 0 24 24",
-                      fill: "none",
-                      stroke: "currentColor",
-                      "stroke-width": "2",
-                      "stroke-linecap": "round",
-                      "stroke-linejoin": "round"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: { d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" }
-                    }),
-                    _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
-                    _vm._v(" "),
-                    _c("path", { attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" } }),
-                    _vm._v(" "),
-                    _c("path", { attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" } })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "text-base ml-3" }, [
-                _vm._v("Students")
-              ])
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "li",
-            {
-              staticClass:
-                "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
-            },
-            [
-              _c("span", [
-                _c(
-                  "svg",
-                  {
-                    staticClass: "w-4 h-4 ml-3",
-                    attrs: {
-                      xmlns: "http://www.w3.org/2000/svg",
-                      width: "24",
-                      height: "24",
-                      viewBox: "0 0 24 24",
-                      fill: "none",
-                      stroke: "currentColor",
-                      "stroke-width": "2",
-                      "stroke-linecap": "round",
-                      "stroke-linejoin": "round"
-                    }
-                  },
-                  [
-                    _c("path", {
-                      attrs: { d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" }
-                    }),
-                    _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
-                    _vm._v(" "),
-                    _c("path", { attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" } }),
-                    _vm._v(" "),
-                    _c("path", { attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" } })
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("span", { staticClass: "text-base ml-3" }, [
-                _vm._v("Teachers")
-              ])
-            ]
-          )
-        ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticClass: "text-base ml-3" },
+              [
+                _c("router-link", { attrs: { to: "/" } }, [_vm._v("Dashboard")])
+              ],
+              1
+            )
+          ]
+        ),
         _vm._v(" "),
-        _c("hr", { staticClass: "text-gray-700 my-3" })
-      ]
-    )
-  ])
+        _c(
+          "li",
+          {
+            staticClass:
+              "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
+          },
+          [
+            _c("span", [
+              _c(
+                "svg",
+                {
+                  staticClass: "w-4 h-4 ml-3",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    "stroke-width": "2",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d: "M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"
+                    }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "span",
+              { staticClass: "text-base ml-3" },
+              [
+                _c("router-link", { attrs: { to: "/course" } }, [
+                  _vm._v("Courses")
+                ])
+              ],
+              1
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("hr", { staticClass: "text-gray-700 my-3" }),
+      _vm._v(" "),
+      _c("ul", [
+        _c(
+          "li",
+          {
+            staticClass:
+              "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
+          },
+          [
+            _c("span", [
+              _c(
+                "svg",
+                {
+                  staticClass: "w-4 h-4 ml-3",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    "stroke-width": "2",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: { d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" }
+                  }),
+                  _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
+                  _vm._v(" "),
+                  _c("path", { attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" } }),
+                  _vm._v(" "),
+                  _c("path", { attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" } })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-base ml-3" }, [_vm._v("Students")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          {
+            staticClass:
+              "flex items-center p-3 hover:bg-indigo-500 hover:text-white"
+          },
+          [
+            _c("span", [
+              _c(
+                "svg",
+                {
+                  staticClass: "w-4 h-4 ml-3",
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    width: "24",
+                    height: "24",
+                    viewBox: "0 0 24 24",
+                    fill: "none",
+                    stroke: "currentColor",
+                    "stroke-width": "2",
+                    "stroke-linecap": "round",
+                    "stroke-linejoin": "round"
+                  }
+                },
+                [
+                  _c("path", {
+                    attrs: { d: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" }
+                  }),
+                  _c("circle", { attrs: { cx: "9", cy: "7", r: "4" } }),
+                  _vm._v(" "),
+                  _c("path", { attrs: { d: "M23 21v-2a4 4 0 0 0-3-3.87" } }),
+                  _vm._v(" "),
+                  _c("path", { attrs: { d: "M16 3.13a4 4 0 0 1 0 7.75" } })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("span", { staticClass: "text-base ml-3" }, [_vm._v("Teachers")])
+          ]
+        )
+      ])
+    ]
+  )
 }
 var staticRenderFns = [
   function() {
@@ -20197,7 +20215,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "section",
-      { staticClass: "flex ml-3 pt-3 pb-1 mb-5 border-b border-gray-300" },
+      { staticClass: "flex ml-3 pt-3 pb-1 border-b border-gray-300" },
       [
         _c(
           "span",
@@ -20216,11 +20234,9 @@ var staticRenderFns = [
         ),
         _vm._v(" "),
         _c("div", { staticClass: "ml-3" }, [
-          _c("h2", { staticClass: "text-bold" }, [_vm._v("Carmen Rivera")]),
+          _c("h2", { staticClass: "text-bold" }, [_vm._v("Admin Name")]),
           _vm._v(" "),
-          _c("p", { staticClass: "text-gray-400 text-sm" }, [
-            _vm._v("Lead Recruiter")
-          ])
+          _c("p", { staticClass: "text-gray-400 text-sm" }, [_vm._v("Admin")])
         ])
       ]
     )

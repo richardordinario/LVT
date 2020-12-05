@@ -1,14 +1,17 @@
 <template>
-    <div class="container mt-24"> 
-        <span class="text-3xl mx-5">Dashboard</span>
-        <div class="grid grid-cols-3 gap-2">
-            <div class="h-20 bg-orange-500">1</div>
-            <div class="">2</div>
-            <div class="">3</div>
+    <div class=""> 
+        <h1 class="text-gray-700 text-3xl mb-10">Dashboard</h1>
+        <div class="flex flex-wrap">
+            <div class="w-full">
+                <div class="bg-gradient-to-r from-teal-400 to-blue-500">
+                    <div class="flex flex-row items-center">
+                        <div class=""></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
     </div>
-    
+
 </template>
 
 <script>
