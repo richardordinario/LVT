@@ -1,21 +1,23 @@
 <template>
-    <div class=""> 
-        <h1 class="text-gray-700 text-3xl mb-10">Dashboard</h1>
-        <div class="flex flex-wrap">
-            <div class="w-full">
-                <div class="bg-gradient-to-r from-teal-400 to-blue-500">
-                    <div class="flex flex-row items-center">
-                        <div class=""></div>
-                    </div>
-                </div>
-            </div>
+   <div class="md:flex m-2">
+        <div class="flex-auto bg-orange-200 rounded-xl h-100 w-100 p-6 m-2">
+            <h1>Flex 1</h1>
+        </div>
+        <div class="flex-auto bg-blue-200 rounded-xl h-100 w-100 p-6 m-2">
+            <h1>Flex 2</h1>
+        </div>
+        <div class="flex-auto bg-teal-200 rounded-xl h-100 w-100 p-6 m-2">
+            <h1>Flex 3</h1>
+        </div>
+        <div class="flex-auto bg-yellow-200 rounded-xl h-100 w-100 p-6 m-2">
+            <h1>Flex 4</h1>
         </div>
     </div>
-
 </template>
 
 <script>
 export default {
-    name: 'Home'
+    name: 'Home',
+
 }
 </script>
